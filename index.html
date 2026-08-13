@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Space</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+        <div class="brand-icon">🌤️</div>
+        <div>
+            <h2>Little Space</h2>
+            <p data-i18n="brandSub">A softer place for your thoughts.</p>
+        </div>
+    </div>
+
+    <div class="header-actions">
+
+        <button class="music-btn" onclick="openSection('song')">
+            🎵
+        </button>
+
+        <select id="languageSelect" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="te">తెలుగు</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-badge" data-i18n="badge">
+        ✨ NO PERFECT DAY REQUIRED
+    </div>
+
+    <h1>
+        <span data-i18n="hero1">Today can be</span>
+        <span class="accent" data-i18n="hero2">a little lighter.</span>
+    </h1>
+
+    <p class="hero-text" data-i18n="heroSub">
+        You don't have to fix everything today. Just take one gentle step.
+    </p>
+
+    <div class="hero-buttons">
+        <button class="primary-btn" onclick="openSection('mood')" data-i18n="feeling">
+            How am I feeling? →
+        </button>
+
+        <button class="secondary-btn" onclick="surpriseMe()" data-i18n="surprise">
+            🎁 Surprise me
+        </button>
+    </div>
+
+    <p class="tiny-text" data-i18n="tiny">
+        No pressure • No judgement • Just you
+    </p>
+
+</section>
+
+
+<section class="quick-area">
+
+    <div class="section-heading">
+        <span data-i18n="exploreLabel">A LITTLE SOMETHING FOR YOU</span>
+        <h2 data-i18n="exploreTitle">Choose what feels right.</h2>
+    </div>
+
+
+    <div class="cards-grid">
+
+        <div class="feature-card pink" onclick="openSection('people')">
+            <div class="card-icon">💗</div>
+            <h3 data-i18n="peopleTitle">People I Want Close</h3>
+            <p data-i18n="peopleSub">Keep the people who make your world softer.</p>
+            <span data-i18n="explore">Explore →</span>
+        </div>
+
+
+        <div class="feature-card yellow" onclick="openSection('dream')">
+            <div class="card-icon">✨</div>
+            <h3 data-i18n="dreamTitle">Something I Want</h3>
+            <p data-i18n="dreamSub">A dream, a goal or something worth waiting for.</p>
+            <span data-i18n="explore">Explore →</span>
+        </div>
+
+
+        <div class="feature-card purple" onclick="openSection('memory')">
+            <div class="card-icon">🎵</div>
+            <h3 data-i18n="memoryTitle">A Moment I Keep</h3>
+            <p data-i18n="memorySub">Save a moment you never want to lose.</p>
+            <span data-i18n="explore">Explore →</span>
+        </div>
+
+
+        <div class="feature-card blue" onclick="openSection('place')">
+            <div class="card-icon">🌍</div>
+            <h3 data-i18n="placeTitle">A Place I Imagine</h3>
+            <p data-i18n="placeSub">Somewhere your heart wants to go.</p>
+            <span data-i18n="explore">Explore →</span>
+        </div>
+
+
+        <div class="feature-card green" onclick="openSection('future')">
+            <div class="card-icon">🌱</div>
+            <h3 data-i18n="futureTitle">The Person I'm Becoming</h3>
+            <p data-i18n="futureSub">A small picture of the life you want.</p>
+            <span data-i18n="explore">Explore →</span>
+        </div>
+
+
+        <div class="feature-card orange" onclick="openSection('step')">
+            <div class="card-icon">☀️</div>
+            <h3 data-i18n="stepTitle">One Tiny Step</h3>
+            <p data-i18n="stepSub">Forget the whole road. Look at the next step.</p>
+            <span data-i18n="explore">Explore →</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="happy-zone">
+
+    <div class="happy-content">
+        <span>🌈</span>
+
+        <h2 data-i18n="happyTitle">
+            Your brain deserves<br>
+            a small holiday.
+        </h2>
+
+        <p data-i18n="happySub">
+            Sometimes you don't need an answer. You just need something nice.
+        </p>
+
+        <button class="primary-btn" onclick="openSection('fun')" data-i18n="funBtn">
+            Give me something nice ✨
+        </button>
+    </div>
+
+</section>
+
+
+<section class="history-section">
+
+    <div class="section-heading">
+        <span data-i18n="historyLabel">YOUR LITTLE ARCHIVE</span>
+        <h2 data-i18n="historyTitle">Things you chose to keep.</h2>
+    </div>
+
+    <div id="historyContainer" class="history-grid"></div>
+
+</section>
+
+
+<section class="emergency-section">
+
+    <div class="emergency-inner">
+
+        <div class="emergency-icon">🫶</div>
+
+        <h2 data-i18n="emergencyTitle">
+            Need someone right now?
+        </h2>
+
+        <p data-i18n="emergencySub">
+            If you feel unsafe or feel you may hurt yourself, please reach out to a real person or emergency service now.
+        </p>
+
+        <button class="emergency-btn" onclick="openEmergency()" data-i18n="emergencyBtn">
+            ❤️ I need help now
+        </button>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <h3>Little Space 🌤️</h3>
+
+    <p data-i18n="footer">
+        A small place to pause, breathe and choose your next step.
+    </p>
+
+</footer>
+
+
+<!-- ================= MODAL ================= -->
+
+<div id="modal" class="modal">
+
+    <div class="modal-box">
+
+        <button class="close-btn" onclick="closeModal()">×</button>
+
+        <div id="modalContent"></div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
