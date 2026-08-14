@@ -4,107 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Good Again.</title>
+    <title>BetterMoment</title>
 
-    <!-- IMPORTANT: CSS connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- BACKGROUND -->
-<div class="bg-orb orb-one"></div>
-<div class="bg-orb orb-two"></div>
-<div class="bg-orb orb-three"></div>
+<!-- ================= HEADER ================= -->
 
-<!-- NAVBAR -->
-<header class="navbar">
+<header class="topbar">
 
     <div class="logo">
-        GOOD AGAIN<span>.</span>
+        BETTER<span>MOMENT</span>
     </div>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#explore">Explore</a>
-        <a href="#memories">Memories</a>
-        <a href="#people">People</a>
+        <a href="#home">⌂ <span data-en="Home" data-te="హోమ్" data-hi="होम">Home</span></a>
+        <a href="#explore">✦ <span data-en="Explore" data-te="ఎక్స్‌ప్లోర్" data-hi="एक्सप्लोर">Explore</span></a>
+        <a href="#memories">♡ <span data-en="Memories" data-te="మెమరీస్" data-hi="मेमोरीज़">Memories</span></a>
+        <a href="#people">● <span data-en="People" data-te="మనుషులు" data-hi="लोग">People</span></a>
     </nav>
 
     <select id="languageSelect">
-        <option value="en">English</option>
-        <option value="te">తెలుగు</option>
-        <option value="hi">हिन्दी</option>
-        <option value="ta">தமிழ்</option>
-        <option value="kn">ಕನ್ನಡ</option>
-        <option value="ml">മലയാളം</option>
-    </select>
+    <option value="en">English</option>
+    <option value="te">తెలుగు</option>
+    <option value="hi">हिन्दी</option>
+</select>
 
 </header>
 
+
+<main>
 
 <!-- ================= HOME ================= -->
 
 <section id="home" class="hero">
 
-    <div class="floating-card float-left">
-        <span>💼</span>
-        <b>Career</b>
-        <small>Find your way</small>
-    </div>
-
-    <div class="floating-card float-right">
-        <span>🧠</span>
-        <b>Mind</b>
-        <small>Make some space</small>
-    </div>
-
-    <div class="floating-card float-bottom">
-        <span>💰</span>
-        <b>Money</b>
-        <small>Make it clearer</small>
-    </div>
+    <div class="hero-orb orb-one"></div>
+    <div class="hero-orb orb-two"></div>
+    <div class="hero-orb orb-three"></div>
 
     <div class="hero-content">
 
-        <div class="eyebrow">
-            A SPACE THAT MOVES WITH YOU
+        <div class="eyebrow"
+             data-en="A SPACE FOR YOUR NEXT MOVE"
+             data-te="నీ తదుపరి అడుగు కోసం ఒక స్థలం"
+             data-hi="आपके अगले कदम के लिए एक जगह">
+            A SPACE FOR YOUR NEXT MOVE
         </div>
 
-        <h1>
-            You don't have to<br>
-            have it all figured<br>
-            <span>out.</span>
+        <h1
+            data-en="You don't need to have it all figured out."
+            data-te="అన్నీ ఇప్పుడే అర్థం చేసుకోవాల్సిన అవసరం లేదు."
+            data-hi="आपको अभी सब कुछ समझना ज़रूरी नहीं है।">
+            You don't need to have it all figured out.
         </h1>
 
-        <p>
-            Whatever is sitting heavy in your mind right now,
-            bring it here. We'll figure out the next move together.
+        <p
+            data-en="Whatever feels heavy right now, start here. One clear thought at a time."
+            data-te="ఇప్పుడు ఏది భారంగా అనిపిస్తున్నా, ఇక్కడి నుంచే మొదలు పెట్టు."
+            data-hi="अभी जो भी भारी लग रहा है, यहीं से शुरू करें।">
+            Whatever feels heavy right now, start here.
+            One clear thought at a time.
         </p>
 
-        <button class="main-btn" onclick="startJourney()">
-            START WITH ME →
+        <button class="primary-btn" onclick="scrollToSection('explore')">
+            <span data-en="START HERE →"
+                  data-te="ఇక్కడ మొదలు పెట్టు →"
+                  data-hi="यहाँ से शुरू करें →">
+                START HERE →
+            </span>
         </button>
 
-        <div class="quick-row">
+    </div>
 
-            <button onclick="openQuick('mind')">
-                🧠 Clear my mind
-            </button>
+</section>
 
-            <button onclick="openQuick('stress')">
-                🌿 I'm stressed
-            </button>
 
-            <button onclick="openQuick('decision')">
-                🧩 Help me decide
-            </button>
+<!-- ================= RIGHT NOW ================= -->
 
-            <button onclick="openQuick('next')">
-                ✦ What's next?
-            </button>
+<section class="section">
 
+    <div class="section-heading">
+
+        <div class="eyebrow"
+             data-en="RIGHT NOW"
+             data-te="ఇప్పుడే"
+             data-hi="अभी">
+            RIGHT NOW
         </div>
+
+        <h2
+            data-en="What do you need from this moment?"
+            data-te="ఈ క్షణంలో నీకు ఏం కావాలి?"
+            data-hi="इस समय आपको क्या चाहिए?">
+            What do you need from this moment?
+        </h2>
+
+    </div>
+
+
+    <div class="quick-grid">
+
+        <button class="quick-card" onclick="openSituation('Mind')">
+            <span class="card-icon">🧠</span>
+            <strong data-en="Clear my head"
+                    data-te="నా మనసును ప్రశాంతం చేయి"
+                    data-hi="मेरा मन शांत करें">
+                Clear my head
+            </strong>
+            <small data-en="Too much is happening."
+                  data-te="చాలా ఆలోచనలు వస్తున్నాయి."
+                  data-hi="बहुत कुछ चल रहा है।">
+                Too much is happening.
+            </small>
+        </button>
+
+
+        <button class="quick-card" onclick="openSituation('Career')">
+            <span class="card-icon">🎯</span>
+            <strong data-en="Career clarity"
+                    data-te="కెరీర్ క్లారిటీ"
+                    data-hi="करियर की clarity">
+                Career clarity
+            </strong>
+            <small data-en="I don't know my next move."
+                  data-te="తర్వాత ఏం చేయాలో తెలియడం లేదు."
+                  data-hi="अगला कदम समझ नहीं आ रहा।">
+                I don't know my next move.
+            </small>
+        </button>
+
+
+        <button class="quick-card" onclick="openSituation('Money')">
+            <span class="card-icon">💰</span>
+            <strong data-en="Money stress"
+                    data-te="డబ్బు గురించి టెన్షన్"
+                    data-hi="पैसों की चिंता">
+                Money stress
+            </strong>
+            <small data-en="I need to make sense of it."
+                  data-te="ఏం చేయాలో అర్థం కావడం లేదు."
+                  data-hi="समझ नहीं आ रहा क्या करें।">
+                I need to make sense of it.
+            </small>
+        </button>
+
+
+        <button class="quick-card" onclick="openSituation('Study')">
+            <span class="card-icon">📚</span>
+            <strong data-en="Study pressure"
+                    data-te="చదువు ప్రెజర్"
+                    data-hi="पढ़ाई का pressure">
+                Study pressure
+            </strong>
+            <small data-en="I can't focus."
+                  data-te="ఫోకస్ అవ్వలేకపోతున్నాను."
+                  data-hi="Focus नहीं हो रहा।">
+                I can't focus.
+            </small>
+        </button>
+
+
+        <button class="quick-card" onclick="openSituation('People')">
+            <span class="card-icon">❤️</span>
+            <strong data-en="People"
+                    data-te="మనుషులు"
+                    data-hi="लोग">
+                People
+            </strong>
+            <small data-en="Something feels off."
+                  data-te="ఏదో సరిగ్గా అనిపించడం లేదు."
+                  data-hi="कुछ ठीक नहीं लग रहा।">
+                Something feels off.
+            </small>
+        </button>
+
+
+        <button class="quick-card" onclick="openSituation('Future')">
+            <span class="card-icon">🌱</span>
+            <strong data-en="What next?"
+                    data-te="తర్వాత ఏంటి?"
+                    data-hi="अब आगे क्या?">
+                What next?
+            </strong>
+            <small data-en="I don't know what to do."
+                  data-te="ఏం చేయాలో తెలియడం లేదు."
+                  data-hi="समझ नहीं आ रहा क्या करना है।">
+                I don't know what to do.
+            </small>
+        </button>
 
     </div>
 
@@ -113,119 +208,117 @@
 
 <!-- ================= EXPLORE ================= -->
 
-<section id="explore" class="section">
+<section id="explore" class="section dark-section">
 
     <div class="section-heading">
-        <span>NOT JUST SOMETHING TO READ</span>
-        <h2>Pick what is actually<br>happening.</h2>
-        <p>
-            Choose a situation. Your answer changes what happens next.
-        </p>
-    </div>
 
+        <div class="eyebrow"
+             data-en="EXPLORE"
+             data-te="ఎక్స్‌ప్లోర్"
+             data-hi="एक्सप्लोर">
+            EXPLORE
+        </div>
 
-    <div class="category-grid">
-
-        <button class="category-card" onclick="openSituation('mind')">
-            <div>🧠</div>
-            <h3>My mind</h3>
-            <p>Too much happening inside.</p>
-        </button>
-
-        <button class="category-card" onclick="openSituation('career')">
-            <div>💼</div>
-            <h3>Career</h3>
-            <p>I don't know what comes next.</p>
-        </button>
-
-        <button class="category-card" onclick="openSituation('money')">
-            <div>💰</div>
-            <h3>Money</h3>
-            <p>It's becoming stressful.</p>
-        </button>
-
-        <button class="category-card" onclick="openSituation('study')">
-            <div>📚</div>
-            <h3>Study</h3>
-            <p>I can't focus anymore.</p>
-        </button>
-
-        <button class="category-card" onclick="openSituation('people')">
-            <div>❤️</div>
-            <h3>People</h3>
-            <p>Something feels complicated.</p>
-        </button>
-
-        <button class="category-card" onclick="openSituation('love')">
-            <div>💗</div>
-            <h3>Love</h3>
-            <p>I don't know what to do.</p>
-        </button>
-
-        <button class="category-card" onclick="openSituation('future')">
-            <div>🌱</div>
-            <h3>Future</h3>
-            <p>I'm scared of what's ahead.</p>
-        </button>
-
-        <button class="category-card special-card" onclick="openSituation('next')">
-            <div>🧭</div>
-            <h3>I don't know what to do next</h3>
-            <p>Start here. We'll work it out.</p>
-        </button>
+        <h2
+            data-en="Choose what you need. Get a useful response."
+            data-te="నీకు కావాల్సింది ఎంచుకో. ఉపయోగకరమైన సమాధానం పొందు."
+            data-hi="जो चाहिए चुनें और उपयोगी जवाब पाएं।">
+            Choose what you need. Get a useful response.
+        </h2>
 
     </div>
 
-</section>
 
+    <div class="explore-grid">
 
-<!-- ================= DAILY CHECK ================= -->
-
-<section class="daily-section">
-
-    <div class="daily-card">
-
-        <div class="daily-left">
-            <span class="eyebrow">RIGHT NOW</span>
-
-            <h2>
-                What is taking up<br>
-                most of your head?
-            </h2>
-
-            <p>
-                You can choose more than one.
-                There is no wrong answer.
+        <button class="explore-card" onclick="openSituation('Reset')">
+            <span>🌿</span>
+            <h3 data-en="Reset my head"
+                data-te="నా మనసును రీసెట్ చేయి"
+                data-hi="मेरा मन reset करें">
+                Reset my head
+            </h3>
+            <p data-en="When everything feels too much."
+               data-te="అన్నీ ఎక్కువగా అనిపించినప్పుడు."
+               data-hi="जब सब कुछ बहुत ज्यादा लगे।">
+                When everything feels too much.
             </p>
-        </div>
+        </button>
 
-        <div class="mood-buttons">
 
-            <button onclick="quickAnswer('overthinking')">
-                😵 Too many thoughts
-            </button>
+        <button class="explore-card" onclick="openSituation('Decision')">
+            <span>🧭</span>
+            <h3 data-en="Help me decide"
+                data-te="నాకు నిర్ణయం తీసుకోవడంలో సహాయం చేయి"
+                data-hi="फैसला लेने में मदद करें">
+                Help me decide
+            </h3>
+            <p data-en="When you keep going back and forth."
+               data-te="ఏది ఎంచుకోవాలో అర్థం కాకపోతే."
+               data-hi="जब आप बार-बार confused हों।">
+                When you keep going back and forth.
+            </p>
+        </button>
 
-            <button onclick="quickAnswer('low')">
-                😔 I feel low
-            </button>
 
-            <button onclick="quickAnswer('angry')">
-                😡 I'm angry
-            </button>
+        <button class="explore-card" onclick="openSituation('Plan')">
+            <span>📝</span>
+            <h3 data-en="Make me a plan"
+                data-te="నాకు ఒక ప్లాన్ చేయి"
+                data-hi="मेरे लिए plan बनाएं">
+                Make me a plan
+            </h3>
+            <p data-en="Turn a messy problem into steps."
+               data-te="గందరగోళాన్ని చిన్న steps గా మార్చు."
+               data-hi="Problem को छोटे steps में बदलें।">
+                Turn a messy problem into steps.
+            </p>
+        </button>
 
-            <button onclick="quickAnswer('tomorrow')">
-                😰 I'm worried about tomorrow
-            </button>
 
-            <button onclick="quickAnswer('brain')">
-                🧠 I can't switch my brain off
-            </button>
+        <button class="explore-card" onclick="openSituation('Words')">
+            <span>💬</span>
+            <h3 data-en="Find the words"
+                data-te="ఏం చెప్పాలో చెప్పు"
+                data-hi="सही शब्द ढूंढें">
+                Find the words
+            </h3>
+            <p data-en="Say something without making it awkward."
+               data-te="ఇబ్బందిగా కాకుండా ఎలా చెప్పాలో."
+               data-hi="बिना awkward हुए कैसे कहें।">
+                Say something without making it awkward.
+            </p>
+        </button>
 
-            <button onclick="quickAnswer('alone')">
-                🫂 I feel alone
-            </button>
 
-        </div>
+        <button class="explore-card" onclick="openSituation('Motivation')">
+            <span>✨</span>
+            <h3 data-en="Give me a push"
+                data-te="నాకు కొంచెం motivation ఇవ్వు"
+                data-hi="थोड़ी motivation दें">
+                Give me a push
+            </h3>
+            <p data-en="I know I need to start."
+               data-te="మొదలు పెట్టాలని తెలుసు కానీ కుదరడం లేదు."
+               data-hi="शुरू करना है लेकिन हो नहीं रहा।">
+                I know I need to start.
+            </p>
+        </button>
+
+
+        <button class="explore-card" onclick="openSituation('Next')">
+            <span>🚶</span>
+            <h3 data-en="What should I do next?"
+                data-te="ఇప్పుడు నేను ఏం చేయాలి?"
+                data-hi="अब मुझे क्या करना चाहिए?">
+                What should I do next?
+            </h3>
+            <p data-en="I need one clear next step."
+               data-te="ఒక్క clear next step కావాలి."
+               data-hi="मुझे एक clear next step चाहिए।">
+                I need one clear next step.
+            </p>
+        </button>
 
     </div>
 
@@ -234,38 +327,47 @@
 
 <!-- ================= MEMORIES ================= -->
 
-<section id="memories" class="section memories-section">
+<section id="memories" class="section">
 
     <div class="section-heading">
-        <span>KEEP WHAT MATTERS</span>
-        <h2>Your little memories.</h2>
+
+        <div class="eyebrow"
+             data-en="MEMORIES"
+             data-te="మెమరీస్"
+             data-hi="मेमोरीज़">
+            MEMORIES
+        </div>
+
+        <h2
+            data-en="Keep the moments that matter."
+            data-te="నీకు ముఖ్యమైన క్షణాలను దాచుకో."
+            data-hi="महत्वपूर्ण पलों को संभालकर रखें।">
+            Keep the moments that matter.
+        </h2>
+
         <p>
-            Save a thought, picture, moment or anything you don't want to lose.
+            Thoughts, pictures and small wins stay on your device.
         </p>
-    </div>
-
-
-    <div class="memory-tools">
-
-        <textarea
-            id="memoryText"
-            placeholder="Write something you want to remember..."
-        ></textarea>
-
-        <input
-            type="file"
-            id="memoryImage"
-            accept="image/*"
-        >
-
-        <button class="main-btn small-btn" onclick="saveMemory()">
-            SAVE THIS MOMENT →
-        </button>
 
     </div>
 
 
-    <div id="memoryList" class="memory-grid"></div>
+    <div class="memory-actions">
+
+        <button onclick="saveThought()">✍️ Save a thought</button>
+
+        <button onclick="savePicture()">🖼️ Save a picture</button>
+
+        <button onclick="deleteMemory()">🗑️ Delete latest</button>
+
+    </div>
+
+
+    <div id="memoryList" class="memory-list">
+        <div class="empty-state">
+            No memories saved yet.
+        </div>
+    </div>
 
 </section>
 
@@ -275,124 +377,68 @@
 <section id="people" class="section people-section">
 
     <div class="section-heading">
-        <span>YOUR PEOPLE</span>
-        <h2>Keep your people close.</h2>
-        <p>
-            Add someone you trust. When you need them, don't search.
-        </p>
-    </div>
 
-
-    <div class="people-box">
-
-        <input
-            id="personName"
-            type="text"
-            placeholder="Person's name"
-        >
-
-        <input
-            id="personPhone"
-            type="tel"
-            placeholder="Phone number"
-        >
-
-        <select id="personType">
-            <option>Important person</option>
-            <option>Friend</option>
-            <option>Family</option>
-            <option>Mentor</option>
-        </select>
-
-        <button class="main-btn small-btn" onclick="savePerson()">
-            SAVE PERSON
-        </button>
-
-    </div>
-
-
-    <div id="peopleList" class="people-grid"></div>
-
-
-    <div class="emergency-box">
-
-        <div>
-            <span>🚨</span>
-            <h3>Need urgent help?</h3>
-            <p>
-                If you're in immediate danger, contact emergency services
-                or someone you trust right away.
-            </p>
+        <div class="eyebrow"
+             data-en="PEOPLE WHO MATTER"
+             data-te="ముఖ్యమైన మనుషులు"
+             data-hi="खास लोग">
+            PEOPLE WHO MATTER
         </div>
 
-        <a href="tel:112" class="emergency-btn">
-            CALL EMERGENCY
-        </a>
+        <h2
+            data-en="You don't have to handle everything alone."
+            data-te="అన్నింటినీ ఒంటరిగా handle చేయాల్సిన అవసరం లేదు."
+            data-hi="आपको सब कुछ अकेले handle नहीं करना है।">
+            You don't have to handle everything alone.
+        </h2>
+
+        <p>
+            Save one trusted person. Call or message them when you need them.
+        </p>
+
+    </div>
+
+
+    <div id="personBox" class="person-box">
+
+        <div class="empty-state">
+            No person saved.
+        </div>
+
+    </div>
+
+
+    <div class="people-buttons">
+
+        <button onclick="addPerson()">➕ Add person</button>
+
+        <button onclick="callPerson()">📞 Call</button>
+
+        <button onclick="messagePerson()">💬 Message</button>
 
     </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
-
-<footer>
-    <div class="logo">GOOD AGAIN<span>.</span></div>
-
-    <p>
-        You don't have to fix everything today.
-        Just find your next clear step.
-    </p>
-</footer>
+</main>
 
 
 <!-- ================= MODAL ================= -->
 
-<div id="modal" class="modal hidden">
+<div id="modal" class="modal">
 
-    <div class="modal-card">
+    <div class="modal-content">
 
-        <button class="close-btn" onclick="closeModal()">×</button>
+        <button class="modal-close" onclick="closeModal()">×</button>
 
-        <span class="eyebrow">YOUR SITUATION</span>
-
-        <h2 id="modalTitle">
-            Let's understand it.
-        </h2>
-
-        <p id="modalSubtitle">
-            Choose what feels closest.
-        </p>
-
-        <div id="questionOptions" class="question-options"></div>
-
-        <div id="answerBox" class="answer-box hidden">
-
-            <div class="answer-icon">✦</div>
-
-            <span>FOR YOU RIGHT NOW</span>
-
-            <h3 id="answerTitle"></h3>
-
-            <p id="answerText"></p>
-
-            <div class="next-move">
-                <small>YOUR NEXT MOVE</small>
-                <strong id="nextMove"></strong>
-            </div>
-
-            <button id="answerButton" class="answer-button">
-                LET'S DO IT →
-            </button>
-
-        </div>
+        <div id="modalBody"></div>
 
     </div>
 
 </div>
 
 
-<!-- IMPORTANT: JS CONNECTION -->
 <script src="script.js"></script>
 
 </body>
